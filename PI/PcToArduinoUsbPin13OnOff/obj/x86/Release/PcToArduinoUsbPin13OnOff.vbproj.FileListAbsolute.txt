@@ -1,0 +1,11 @@
+C:\Users\acer\Desktop\PcToArduinoUsbPin13OnOff.exe
+C:\Users\acer\Desktop\PcToArduinoUsbPin13OnOff.pdb
+C:\Users\acer\Desktop\PcToArduinoUsbPin13OnOff.xml
+C:\Users\acer\documents\visual studio 2010\Projects\PcToArduinoUsbPin13OnOff\PcToArduinoUsbPin13OnOff\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\acer\documents\visual studio 2010\Projects\PcToArduinoUsbPin13OnOff\PcToArduinoUsbPin13OnOff\obj\x86\Release\PcToArduinoUsbPin13OnOff.Resources.resources
+C:\Users\acer\documents\visual studio 2010\Projects\PcToArduinoUsbPin13OnOff\PcToArduinoUsbPin13OnOff\obj\x86\Release\PcToArduinoUsbPin13OnOff.PcArduinoUsbPin13OnOff.resources
+C:\Users\acer\documents\visual studio 2010\Projects\PcToArduinoUsbPin13OnOff\PcToArduinoUsbPin13OnOff\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\acer\documents\visual studio 2010\Projects\PcToArduinoUsbPin13OnOff\PcToArduinoUsbPin13OnOff\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\acer\documents\visual studio 2010\Projects\PcToArduinoUsbPin13OnOff\PcToArduinoUsbPin13OnOff\obj\x86\Release\PcToArduinoUsbPin13OnOff.exe
+C:\Users\acer\documents\visual studio 2010\Projects\PcToArduinoUsbPin13OnOff\PcToArduinoUsbPin13OnOff\obj\x86\Release\PcToArduinoUsbPin13OnOff.xml
+C:\Users\acer\documents\visual studio 2010\Projects\PcToArduinoUsbPin13OnOff\PcToArduinoUsbPin13OnOff\obj\x86\Release\PcToArduinoUsbPin13OnOff.pdb

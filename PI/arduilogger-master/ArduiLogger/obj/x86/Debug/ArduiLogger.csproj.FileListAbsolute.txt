@@ -1,0 +1,8 @@
+C:\Users\HP\Desktop\PI\arduilogger-master\ArduiLogger\bin\Debug\Arduino Logger.exe
+C:\Users\HP\Desktop\PI\arduilogger-master\ArduiLogger\bin\Debug\Arduino Logger.pdb
+C:\Users\HP\Desktop\PI\arduilogger-master\ArduiLogger\obj\x86\Debug\Arduino_Logger.frmAcerca.resources
+C:\Users\HP\Desktop\PI\arduilogger-master\ArduiLogger\obj\x86\Debug\Arduino_Logger.frmArduiLogger.resources
+C:\Users\HP\Desktop\PI\arduilogger-master\ArduiLogger\obj\x86\Debug\Arduino_Logger.Properties.Resources.resources
+C:\Users\HP\Desktop\PI\arduilogger-master\ArduiLogger\obj\x86\Debug\ArduiLogger.csproj.GenerateResource.Cache
+C:\Users\HP\Desktop\PI\arduilogger-master\ArduiLogger\obj\x86\Debug\Arduino Logger.exe
+C:\Users\HP\Desktop\PI\arduilogger-master\ArduiLogger\obj\x86\Debug\Arduino Logger.pdb
