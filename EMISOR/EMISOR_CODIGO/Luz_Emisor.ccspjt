@@ -1,0 +1,20 @@
+[PROJECT]
+Target=Luz_Emisor.hex
+Processor_Text=PIC16F876A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=Luz_Emisor.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+[Luz_Emisor.c]
+Type=4
+[mru-list]
+1=Luz_Emisor.c
+[Opened Files]
+1=Luz_Emisor.c
+2=..\..\RECEPTORES\RECEPTORES\Luz_Receptor.c
+3=
+[Units]
+Count=1
+1=Luz_Emisor (main)

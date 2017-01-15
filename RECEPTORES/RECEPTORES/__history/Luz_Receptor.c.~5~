@@ -1,0 +1,85 @@
+#include <16F876A.h>
+
+#OPT 0            //molestaba para la comunicacion spi, pone el optimizador del código más bajo
+#FUSES NOWDT, XT, PUT, NOPROTECT, NODEBUG, NOBROWNOUT, NOLVP, NOCPD, NOWRT
+#use delay(clock=4000000)
+#include "lib_rf2gh4_10.h"
+
+#use fast_io(A)
+#use fast_io(B)
+#byte porta=0x05
+#byte portb=0x06
+INT8 LAMPARA;  //39 = ENCENDER //68 = APAGAR
+int8  const ENCENDER=39;
+int8  const APAGAR=68;
+
+#INT_EXT
+void int_RB0()
+{
+   int8 ret1;
+
+   ret1 = RF_RECEIVE();
+   if ( (ret1 == 0) || (ret1 == 1) )
+   {
+      do
+      {    
+         LAMPARA=RF_DATA[0];  // El puerto A contendrá el valor que le llege del emisor, a través de RF_DATA[0].
+         ret1 = RF_RECEIVE(); 
+      } while ( (ret1 == 0) || (ret1 == 1) );
+   }  
+}
+#INT_RB
+void interrupcion(){
+
+      
+          
+        
+                  
+                  
+     
+      #asm movf portb,0 #endasm
+}
+
+void main()
+{  
+   
+   int8 ret2;
+   
+   
+   set_tris_b(0xFF);     // Todo el puerto B como entradas.
+   set_tris_a(0x01);
+  
+         
+      
+      
+      
+      
+      
+   
+      
+      
+ }
+      
+      
+      
+  
+   
+   
+   
+   
+   
+   
+   
+  /*
+  int8 ret2;
+   while(true)
+   {  
+     RF_DATA[0]=porta;
+      RF_DIR=0x08;           // Dirección del receptor.
+      ret2=RF_SEND();        // Enviar datos.
+      
+      
+      
+      
+   }*/
+

@@ -1,0 +1,151 @@
+#include <16F876A.h>
+#device  adc=10
+#OPT 0            //molestaba para la comunicacion spi, pone el optimizador del código más bajo
+#FUSES NOWDT, XT, PUT, NOPROTECT, NODEBUG, NOBROWNOUT, NOLVP, NOCPD, NOWRT
+#use delay(clock=4000000)
+#include "lib_rf2gh4_10.h"
+
+#use fast_io(A)
+#use fast_io(B)
+#byte porta=0x05
+#byte portb=0x06
+int8  inter_no_hay_luz=0;
+int8  inter_boton=0;
+int8  inter_temp=0;
+int8  const ENCENDER=39;
+int8  const APAGAR=69;
+int16 Sensor_Luz;
+#INT_EXT
+void respuesta(){
+}
+#INT_RB
+void interrupcion(){
+
+      if(input(PIN_B4))
+      { 
+          inter_no_hay_luz = 1;
+          
+          if(!input(PIN_B5)) {
+            while(!input(PIN_B5));
+           
+            inter_boton=1;
+          }
+          if(!input(PIN_B6)) {
+          while(!input(PIN_B6)); //depende del temporizador
+          
+          inter_temp=1;
+          }
+          
+        
+                  
+                  
+      }else{
+         inter_no_hay_luz = 0;
+       //  output_low(pin_a1);
+         
+      }
+      #asm movf portb,0 #endasm
+}
+
+void main()
+{  
+   
+   int8 ret2;
+   
+   
+   set_tris_b(0xFF);     // Todo el puerto B como entradas.
+   set_tris_a(0x01);
+   PORT_B_PULLUPS(true);
+   setup_adc_ports(AN0);  //convertidor analógico-digital / Sensor de luz
+   setup_adc(ADC_CLOCK_INTERNAL);
+   
+  
+   RF_INT_EN();              // Habilitar interrupción RB0/INT.
+   RF_CONFIG_SPI();          // Configurar módulo SPI del PIC.
+   RF_CONFIG(0x40,0x01);     // Configurar módulo RF canal y dirección.
+   RF_ON();                  // Activar el módulo RF.
+  
+   output_low(pin_a1);
+   output_low(PIN_A2);
+   set_adc_channel(0);
+   delay_ms(1);
+ 
+   while(true)
+   { 
+      
+      inter_no_hay_luz=0;
+      inter_boton=0;
+      inter_temp=0;
+      SLEEP();
+      Sensor_Luz=read_adc();
+      delay_ms(1);
+      if(Sensor_Luz > 900)
+      {
+            if(inter_no_hay_luz==1){
+            //cuando no hay luz
+            //primero envio la señal de encendido = 39 a los dos transceptores
+            RF_DATA[0]=ENCENDER;
+            RF_DIR=0x08;           // Dirección del receptor.
+            ret2=RF_SEND();        // Enviar datos.
+            delay_ms(25);
+            RF_DATA[0]=ENCENDER;
+            RF_DIR=0x0A;           // Dirección del receptor.
+            ret2=RF_SEND();        // Enviar datos.
+            delay_ms(25);
+            output_high(pin_a1);
+            
+            while(inter_boton==0 && inter_temp==0 && inter_no_hay_luz == 1)
+               {    //señal de encendido
+                   delay_ms(500);
+                   output_high(PIN_A2);
+                   delay_ms(500);
+                   output_low(PIN_A2);
+                                 
+               }
+               //señal de apagado
+               output_low(PIN_A2);
+                  RF_DATA[0]=APAGAR;
+                  RF_DIR=0x08;           // Dirección del receptor.
+                  ret2=RF_SEND();        // Enviar datos.
+                  delay_ms(25);
+                  RF_DATA[0]=APAGAR;
+                  RF_DIR=0x0A;           // Dirección del receptor.
+                  ret2=RF_SEND();        // Enviar datos.
+                  delay_ms(25);
+               
+               output_low(pin_a1);
+            }
+         
+      }
+      
+      
+      
+      
+   }
+      
+      
+ }
+      
+      
+      
+  
+   
+   
+   
+   
+   
+   
+   
+  /*
+  int8 ret2;
+   while(true)
+   {  
+     RF_DATA[0]=porta;
+      RF_DIR=0x08;           // Dirección del receptor.
+      ret2=RF_SEND();        // Enviar datos.
+      
+      
+      
+      
+   }*/
+

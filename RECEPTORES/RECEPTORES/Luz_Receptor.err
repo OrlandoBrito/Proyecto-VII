@@ -1,0 +1,13 @@
+*** Error 48 "C:\Users\HP\Desktop\MICRO\LUCES DE EMERGENCIA\RECEPTORES\RECEPTORES\lib_rf2gh4_10.h" Line 594(1,14): Expecting a (
+*** Error 48 "C:\Users\HP\Desktop\MICRO\LUCES DE EMERGENCIA\RECEPTORES\RECEPTORES\lib_rf2gh4_10.h" Line 594(20,28): Expecting a (
+*** Error 48 "C:\Users\HP\Desktop\MICRO\LUCES DE EMERGENCIA\RECEPTORES\RECEPTORES\lib_rf2gh4_10.h" Line 594(33,40): Expecting a (
+*** Error 48 "C:\Users\HP\Desktop\MICRO\LUCES DE EMERGENCIA\RECEPTORES\RECEPTORES\lib_rf2gh4_10.h" Line 594(41,42): Expecting a (
+*** Error 48 "C:\Users\HP\Desktop\MICRO\LUCES DE EMERGENCIA\RECEPTORES\RECEPTORES\lib_rf2gh4_10.h" Line 594(48,49): Expecting a (
+*** Error 48 "C:\Users\HP\Desktop\MICRO\LUCES DE EMERGENCIA\RECEPTORES\RECEPTORES\lib_rf2gh4_10.h" Line 594(61,68): Expecting a (
+*** Error 48 "C:\Users\HP\Desktop\MICRO\LUCES DE EMERGENCIA\RECEPTORES\RECEPTORES\lib_rf2gh4_10.h" Line 595(3,10): Expecting a (
+*** Error 48 "C:\Users\HP\Desktop\MICRO\LUCES DE EMERGENCIA\RECEPTORES\RECEPTORES\lib_rf2gh4_10.h" Line 596(3,13): Expecting a (
+*** Error 48 "C:\Users\HP\Desktop\MICRO\LUCES DE EMERGENCIA\RECEPTORES\RECEPTORES\lib_rf2gh4_10.h" Line 598(2,14): Expecting a (
+*** Error 48 "Luz_Receptor.c" Line 11(2,6): Expecting a (
+*** Error 48 "Luz_Receptor.c" Line 11(7,12): Expecting a (
+*** Error 43 "Luz_Receptor.c" Line 11(13,17): Expecting a declaration
+*** Error 12 "Luz_Receptor.c" Line 67(4,9): Undefined identifier   porta

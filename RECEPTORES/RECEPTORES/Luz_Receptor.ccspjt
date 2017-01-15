@@ -1,0 +1,22 @@
+[PROJECT]
+Target=Luz_Receptor.hex
+Processor_Text=PIC16F876A
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=Luz_Receptor.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+[Luz_Receptor.c]
+Type=4
+[mru-list]
+1=Luz_Receptor.c
+[Opened Files]
+1=Luz_Receptor.c
+2=lib_rf2gh4_10.h
+3=
+4=
+5=
+[Units]
+Count=1
+1=Luz_Receptor (main)

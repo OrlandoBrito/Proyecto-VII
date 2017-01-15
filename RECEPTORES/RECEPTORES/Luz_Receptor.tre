@@ -1,0 +1,12 @@
+ÀÄLuz_Receptor
+   ÃÄMAIN  0/46  Ram=0
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄRF_INT_EN  0/15  Ram=0
+   ³  ÃÄRF_CONFIG_SPI  0/30  Ram=0
+   ³  ÃÄRF_CONFIG  0/581  Ram=2
+   ³  ÀÄRF_ON  0/74  Ram=0
+   ³     ÀÄ@delay_ms1  (Inline)  Ram=1
+   ÃÄint_RB0  0/45  Ram=1
+   ³  ÃÄRF_RECEIVE  0/160  Ram=5
+   ³  ÀÄRF_RECEIVE  0/160  Ram=5
+   ÀÄinterrupcion  0/9  Ram=0
